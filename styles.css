@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body {
+  background: #f3f3f3;
+  color: #111;
+}
+
+/* ============================= */
+/* HEADER PÁGINA PRINCIPAL */
+/* ============================= */
+
+header {
+  background: #9BE63D;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+/* ============================= */
+/* HOME */
+/* ============================= */
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h1 {
+  font-size: 70px;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.hero-img img {
+  width: 700px;
+  max-width: 90%;
+  border-radius: 10px;
+  border: 8px solid black;
+}
+
+.historia {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.historia h2 {
+  margin-bottom: 20px;
+}
+
+.historia p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin: 60px 0 30px;
+}
+
+/* ============================= */
+/* CARDS */
+/* ============================= */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 250px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  text-decoration: none;
+  color: black;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 15px;
+}
+
+.card p {
+  padding: 0 15px 20px;
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+  background: #e9e9e9;
+  padding: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================= */
+/* HEADER DE PRODUCTOS CON LOGO */
+/* ============================= */
+
+header:has(.logo-producto) {
+  width: 100%;
+  height: 70px;
+  background-color: #9BE63D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+header:has(.logo-producto) a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-producto {
+  width: 170px;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+/* ============================= */
+/* PRODUCTOS */
+/* Sirve para detalle y detalle-producto */
+/* ============================= */
+
+.detalle,
+.detalle-producto {
+  width: 100%;
+  height: calc(100vh - 70px);
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #EFE2D8;
+}
+
+/* Imagen izquierda */
+
+.detalle-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.detalle-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Texto derecha */
+
+.detalle-info,
+.detalle-texto {
+  width: 100%;
+  height: 100%;
+  background-color: #EFE2D8;
+  padding: 70px 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Títulos */
+
+.detalle-info h1,
+.detalle-texto h1 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #111;
+  font-weight: bold;
+}
+
+.detalle-info h2,
+.detalle-info h3,
+.detalle-texto h2,
+.detalle-texto h3 {
+  font-size: 25px;
+  margin-bottom: 28px;
+  color: #111;
+  font-weight: bold;
+}
+
+/* Textos */
+
+.detalle-info p,
+.detalle-texto p {
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 18px;
+  color: #111;
+}
+
+/* Listas */
+
+.detalle-info ul,
+.detalle-texto ul {
+  margin-left: 28px;
+  margin-bottom: 25px;
+}
+
+.detalle-info li,
+.detalle-texto li {
+  font-size: 22px;
+  line-height: 1.2;
+  color: #111;
+}
+
+/* Texto rojo */
+
+.rojo,
+.contiene {
+  color: red !important;
+  font-size: 23px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* ============================= */
+/* ARREGLO ESPECIAL BARRITAS */
+/* ============================= */
+
+.barritas-producto .detalle-img img,
+.detalle .detalle-img img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.barritas-texto,
+.detalle-info {
+  padding: 70px 65px;
+}
+
+.barritas-texto h1 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.barritas-texto h2,
+.barritas-texto h3 {
+  font-size: 25px;
+  margin-bottom: 28px;
+}
+
+.barritas-texto p {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.barritas-texto li {
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header:has(.logo-producto) {
+    height: 55px;
+  }
+
+  .logo-producto {
+    width: 130px;
+  }
+
+  .detalle,
+  .detalle-producto {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-img img {
+    height: 320px;
+  }
+
+  .detalle-info,
+  .detalle-texto {
+    padding: 40px 25px;
+  }
+
+  .detalle-info h1,
+  .detalle-texto h1 {
+    font-size: 22px;
+  }
+
+  .detalle-info h2,
+  .detalle-info h3,
+  .detalle-texto h2,
+  .detalle-texto h3 {
+    font-size: 19px;
+  }
+
+  .detalle-info p,
+  .detalle-texto p,
+  .detalle-info li,
+  .detalle-texto li,
+  .contiene,
+  .rojo {
+    font-size: 17px;
+  }
+}
