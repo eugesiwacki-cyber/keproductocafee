@@ -112,6 +112,35 @@ nav a {
 }
 
 /* ============================= */
+/* FOOTER */
+/* ============================= */
+
+footer {
+  background: #e9e9e9;
+  padding: 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ============================= */
 /* HEADER DE PRODUCTOS CON LOGO */
 /* ============================= */
 
@@ -141,17 +170,13 @@ header:has(.logo-producto) a {
 
 /* ============================= */
 /* PRODUCTOS */
+/* Sirve para detalle y detalle-producto */
 /* ============================= */
-
-/* ESTE ES EL ARREGLO IMPORTANTE:
-   antes decía height: calc(100vh - 70px);
-   eso hacía que el texto se saliera y el footer se superpusiera.
-*/
 
 .detalle,
 .detalle-producto {
   width: 100%;
-  min-height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,7 +194,6 @@ header:has(.logo-producto) a {
 .detalle-img img {
   width: 100%;
   height: 100%;
-  min-height: calc(100vh - 70px);
   object-fit: cover;
   object-position: center;
   display: block;
@@ -180,7 +204,7 @@ header:has(.logo-producto) a {
 .detalle-info,
 .detalle-texto {
   width: 100%;
-  min-height: calc(100vh - 70px);
+  height: 100%;
   background-color: #EFE2D8;
   padding: 70px 65px;
   display: flex;
@@ -282,72 +306,136 @@ header:has(.logo-producto) a {
 }
 
 /* ============================= */
-/* FOOTER GENERAL */
+/* RESPONSIVE */
 /* ============================= */
 
-footer,
-#contacto {
-  background-color: #e7e5e5;
-  padding: 60px 80px 30px;
-  font-family: Georgia, "Times New Roman", serif;
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header:has(.logo-producto) {
+    height: 55px;
+  }
+
+  .logo-producto {
+    width: 130px;
+  }
+
+  .detalle,
+  .detalle-producto {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .detalle-img img {
+    height: 320px;
+  }
+
+  .detalle-info,
+  .detalle-texto {
+    padding: 40px 25px;
+  }
+
+  .detalle-info h1,
+  .detalle-texto h1 {
+    font-size: 22px;
+  }
+
+  .detalle-info h2,
+  .detalle-info h3,
+  .detalle-texto h2,
+  .detalle-texto h3 {
+    font-size: 19px;
+  }
+
+  .detalle-info p,
+  .detalle-texto p,
+  .detalle-info li,
+  .detalle-texto li,
+  .contiene,
+  .rojo {
+    font-size: 17px;
+  }
+}
+.footer-simple {
+  background-color: #eeeeee;
   color: #1c1c1c;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-  clear: both;
+  font-family: Georgia, serif;
+  padding: 70px 85px 45px;
 }
 
-.footer-grid {
+.footer-contenido-simple {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 80px;
-  align-items: start;
 }
 
-.footer-grid h3,
-.footer-grid h4 {
-  font-size: 24px;
+.footer-bloque h2 {
+  font-size: 34px;
+  margin-bottom: 5px;
   font-weight: bold;
-  margin-bottom: 8px;
 }
 
-.footer-grid p {
-  max-width: 360px;
-  line-height: 1.15;
-  font-size: 20px;
-  margin: 0;
+.footer-bloque h3 {
+  font-size: 31px;
+  margin-bottom: 18px;
+  font-weight: bold;
 }
 
-.footer-grid ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-grid li {
-  margin-bottom: 12px;
-  font-size: 20px;
-}
-
-.footer-grid a {
+.footer-bloque p,
+.footer-bloque a {
+  display: block;
+  font-size: 28px;
+  line-height: 1.05;
+  margin-bottom: 18px;
+  color: #1c1c1c;
   text-decoration: none;
-  color: #000;
 }
 
-.footer-grid a:hover {
-  text-decoration: underline;
+.footer-marca-simple p {
+  max-width: 390px;
 }
 
-.copyright {
+.footer-copy-simple {
   text-align: center;
-  margin-top: 70px;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: bold;
+  margin-top: 70px;
 }
 
-/* ============================= */
+@media (max-width: 768px) {
+  .footer-simple {
+    padding: 45px 30px;
+  }
+
+  .footer-contenido-simple {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .footer-bloque h2,
+  .footer-bloque h3 {
+    font-size: 26px;
+  }
+
+  .footer-bloque p,
+  .footer-bloque a {
+    font-size: 22px;
+  }
+
+  .footer-copy-simple {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+}
+/* ========================= */
 /* PÁGINA CONTACTO */
-/* ============================= */
+/* ========================= */
 
 .contacto-body {
   margin: 0;
@@ -361,6 +449,7 @@ footer,
   box-sizing: border-box;
 }
 
+/* HEADER VERDE */
 .contacto-header {
   height: 85px;
   background-color: #9bea3b;
@@ -383,6 +472,7 @@ footer,
   margin-right: 3px;
 }
 
+/* CONTENIDO CONTACTO */
 .contacto-main {
   display: flex;
   min-height: calc(100vh - 85px);
@@ -419,9 +509,8 @@ footer,
   margin-bottom: 10px;
 }
 
-/* sirve para contacto-form y contacto-formulario */
-.contacto-form,
-.contacto-formulario {
+/* FORMULARIO */
+.contacto-form {
   width: 50%;
   background-color: #d8c5b5;
   display: flex;
@@ -430,16 +519,14 @@ footer,
   padding: 75px 55px;
 }
 
-.contacto-form form,
-.contacto-formulario form {
+.contacto-form form {
   width: 100%;
   max-width: 470px;
   background-color: #f7efe8;
   padding: 40px;
 }
 
-.contacto-form label,
-.contacto-formulario label {
+.contacto-form label {
   font-family: Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -448,9 +535,7 @@ footer,
 }
 
 .contacto-form input,
-.contacto-form textarea,
-.contacto-formulario input,
-.contacto-formulario textarea {
+.contacto-form textarea {
   width: 100%;
   padding: 14px;
   margin-bottom: 22px;
@@ -460,14 +545,12 @@ footer,
   font-size: 15px;
 }
 
-.contacto-form textarea,
-.contacto-formulario textarea {
+.contacto-form textarea {
   height: 130px;
   resize: none;
 }
 
-.contacto-form button,
-.contacto-formulario button {
+.contacto-form button {
   background-color: #20202a;
   color: white;
   border: none;
@@ -477,102 +560,32 @@ footer,
   cursor: pointer;
 }
 
-.contacto-form button:hover,
-.contacto-formulario button:hover {
+.contacto-form button:hover {
   background-color: #9bea3b;
   color: #20202a;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
+footer {
+    background-color: #e7e5e5;
+    padding: 60px 80px 30px;
+}
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 45px;
-  }
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
 
-  header:has(.logo-producto) {
-    height: 55px;
-  }
+.footer-grid > div {
+    flex: 1;
+}
 
-  .logo-producto {
-    width: 130px;
-  }
+.footer-grid > div:first-child {
+    max-width: 320px;
+}
 
-  .detalle,
-  .detalle-producto {
-    min-height: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .detalle-img img {
-    height: 320px;
-    min-height: 320px;
-  }
-
-  .detalle-info,
-  .detalle-texto {
-    min-height: auto;
-    padding: 40px 25px;
-  }
-
-  .detalle-info h1,
-  .detalle-texto h1 {
-    font-size: 22px;
-  }
-
-  .detalle-info h2,
-  .detalle-info h3,
-  .detalle-texto h2,
-  .detalle-texto h3 {
-    font-size: 19px;
-  }
-
-  .detalle-info p,
-  .detalle-texto p,
-  .detalle-info li,
-  .detalle-texto li,
-  .contiene,
-  .rojo {
-    font-size: 17px;
-  }
-
-  footer,
-  #contacto {
-    padding: 45px 30px 30px;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .copyright {
-    font-size: 18px;
-    margin-top: 40px;
-  }
-
-  .contacto-header {
-    padding-left: 25px;
-  }
-
-  .contacto-main {
-    flex-direction: column;
-  }
-
-  .contacto-texto,
-  .contacto-form,
-  .contacto-formulario {
-    width: 100%;
-    padding: 45px 25px;
-  }
-
-  .contacto-texto h1 {
-    font-size: 42px;
-  }
-
-  .contacto-texto p {
-    font-size: 22px;
-  }
+.copyright {
+    text-align: center;
+    margin-top: 70px;
 }
