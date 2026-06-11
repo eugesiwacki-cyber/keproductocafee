@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia - KE Producto</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #f2e3d6;
+      color: #000;
+    }
+
+    header {
+      height: 85px;
+      background-color: #9bea3b;
+      display: flex;
+      align-items: center;
+      padding-left: 55px;
+    }
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 32px;
+      color: #20202a;
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-size: 16px;
+      text-decoration: underline;
+      margin-right: 3px;
+    }
+
+    .historia {
+      display: flex;
+      min-height: calc(100vh - 85px);
+    }
+
+    .texto {
+      width: 56%;
+      padding: 75px 55px;
+      background-color: #f2e3d6;
+    }
+
+    .texto h1 {
+      font-size: 52px;
+      margin-bottom: 45px;
+      font-weight: normal;
+    }
+
+    .texto p {
+      font-size: 28px;
+      line-height: 1.12;
+      margin-bottom: 35px;
+    }
+
+    .imagen {
+      width: 44%;
+    }
+
+    .imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding-left: 25px;
+      }
+
+      .historia {
+        flex-direction: column;
+      }
+
+      .texto,
+      .imagen {
+        width: 100%;
+      }
+
+      .texto {
+        padding: 45px 25px;
+      }
+
+      .texto h1 {
+        font-size: 42px;
+      }
+
+      .texto p {
+        font-size: 22px;
+      }
+
+      .imagen img {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="../index.html" class="logo">
+      <span>KE</span>PRODUCTO
+    </a>
+  </header>
+
+  <main class="historia">
+
+    <section class="texto">
+      <h1>Historia</h1>
+
+      <p>
+        Ke Producto es un proyecto personal creado por Stefanía Domínguez
+        ("La Patico"), concebido como una forma de reinventarse y tomar las
+        riendas de su vida a través de la alimentación consciente.
+      </p>
+
+      <p>
+        Ubicado en Palermo, este espacio se destaca por ofrecer café de
+        especialidad y una propuesta gastronómica 100% keto, sin gluten y
+        low carb, incluyendo opciones como açaí bowls y opciones de brunch
+        saludable.
+      </p>
+    </section>
+
+    <section class="imagen">
+      <img src="../img/historia.png" alt="Interior de KE Producto">
+    </section>
+
+  </main>
+
+</body>
+</html>
