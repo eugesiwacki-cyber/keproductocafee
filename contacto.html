@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - KE Producto</title>
+
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #f2e3d6;
+      color: black;
+    }
+
+    header {
+      height: 85px;
+      background-color: #9bea3b;
+      display: flex;
+      align-items: center;
+      padding-left: 55px;
+    }
+
+    .logo {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 32px;
+      color: #20202a;
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-size: 16px;
+      text-decoration: underline;
+      margin-right: 3px;
+    }
+
+    .contacto {
+      display: flex;
+      min-height: calc(100vh - 85px);
+    }
+
+    .texto {
+      width: 50%;
+      padding: 75px 55px;
+      background-color: #f2e3d6;
+    }
+
+    .texto h1 {
+      font-size: 52px;
+      font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    .texto p {
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 30px;
+    }
+
+    .datos h3 {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-top: 25px;
+      margin-bottom: 8px;
+    }
+
+    .datos p {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .formulario {
+      width: 50%;
+      background-color: #d8c5b5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 75px 55px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 470px;
+      background-color: #f7efe8;
+      padding: 40px;
+    }
+
+    label {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 22px;
+      border: 1px solid #20202a;
+      background-color: white;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+    }
+
+    textarea {
+      height: 130px;
+      resize: none;
+    }
+
+    button {
+      background-color: #20202a;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #9bea3b;
+      color: #20202a;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding-left: 25px;
+      }
+
+      .contacto {
+        flex-direction: column;
+      }
+
+      .texto,
+      .formulario {
+        width: 100%;
+        padding: 45px 25px;
+      }
+
+      .texto h1 {
+        font-size: 42px;
+      }
+
+      .texto p {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <span>KE</span>PRODUCTO
+    </a>
+  </header>
+
+  <main class="contacto">
+
+    <section class="texto">
+      <h1>Contacto</h1>
+
+      <p>
+        Si querés conocer más sobre KE Producto, hacer una consulta o descubrir
+        nuestras opciones saludables, podés comunicarte con nosotros.
+      </p>
+
+      <div class="datos">
+        <h3>Ubicación</h3>
+        <p>Palermo, Buenos Aires</p>
+
+        <h3>Email</h3>
+        <p>contacto@keproducto.com</p>
+
+        <h3>Instagram</h3>
+        <p>@keproducto</p>
+
+        <h3>Horario</h3>
+        <p>Lunes a sábado de 9 a 20 hs</p>
+      </div>
+    </section>
+
+    <section class="formulario">
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" placeholder="Escribí tu nombre">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Escribí tu email">
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" placeholder="Escribí tu mensaje"></textarea>
+
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+
+  </main>
+
+ <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h3>KE PRODUCTO</h3>
+            <p>
+                Cafetería saludable especializada en opciones keto,
+                sin azúcar y low carb. Platos ricos, nutritivos y
+                prácticos para acompañar tu estilo de vida.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>NAVEGACIÓN</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../productos.html">Productos</a></li>
+                <li><a href="../recetas.html">Recetas</a></li>
+                <li><a href="../contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>PRODUCTOS</h3>
+            <ul>
+                <li>Barritas</li>
+                <li>Snack</li>
+                <li>Milanesas</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>RECETAS</h3>
+            <ul>
+                <li>Brownies</li>
+                <li>Cheesecake</li>
+                <li>Muffins</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 KE PRODUCTO. Todos los derechos reservados.
+    </div>
+</footer>
+  
+</body>
+</html>
