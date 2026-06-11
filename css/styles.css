@@ -565,158 +565,27 @@ header:has(.logo-producto) a {
   color: #20202a;
 }
 
-/* ========================= */
-/* FOOTER SIMPLE */
-/* ========================= */
-
-.footer-simple {
-  background-color: #eeeeee;
-  color: #1c1c1c;
-  font-family: Georgia, serif;
-  padding: 70px 85px 45px;
-}
-
-.footer-contenido-simple {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  gap: 80px;
-}
-
-.footer-bloque h2 {
-  font-size: 34px;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.footer-bloque h3 {
-  font-size: 31px;
-  margin-bottom: 18px;
-  font-weight: bold;
-}
-
-.footer-bloque p,
-.footer-bloque a {
-  display: block;
-  font-size: 28px;
-  line-height: 1.05;
-  margin-bottom: 18px;
-  color: #1c1c1c;
-  text-decoration: none;
-}
-
-.footer-marca-simple p {
-  max-width: 390px;
-}
-
-.footer-copy-simple {
-  text-align: center;
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 70px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .contacto-header {
-    padding-left: 25px;
-  }
-
-  .contacto-main {
-    flex-direction: column;
-  }
-
-  .contacto-texto,
-  .contacto-form {
-    width: 100%;
-    padding: 45px 25px;
-  }
-
-  .contacto-texto h1 {
-    font-size: 42px;
-  }
-
-  .contacto-texto p {
-    font-size: 22px;
-  }
-
-  .footer-simple {
-    padding: 45px 30px;
-  }
-
-  .footer-contenido-simple {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .footer-bloque h2,
-  .footer-bloque h3 {
-    font-size: 26px;
-  }
-
-  .footer-bloque p,
-  .footer-bloque a {
-    font-size: 22px;
-  }
-
-  .footer-copy-simple {
-    font-size: 20px;
-    margin-top: 40px;
-  }
-}
-.footer {
+footer {
     background-color: #e7e5e5;
     padding: 60px 80px 30px;
-    font-family: Georgia, serif;
 }
 
-.footer-container {
+.footer-grid {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;
-    flex-wrap: wrap;
+    gap: 50px;
 }
 
-.footer-col {
+.footer-grid > div {
     flex: 1;
-    min-width: 200px;
 }
 
-.footer-col h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.footer-col p {
+.footer-grid > div:first-child {
     max-width: 320px;
-    line-height: 1.2;
-    font-size: 18px;
 }
 
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 12px;
-    font-size: 18px;
-}
-
-.footer-col ul li a {
-    text-decoration: none;
-    color: #000;
-}
-
-.footer-col ul li a:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
+.copyright {
     text-align: center;
     margin-top: 70px;
-    font-size: 18px;
-    font-weight: 500;
 }
